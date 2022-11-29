@@ -27,8 +27,10 @@ class Order extends Model
         'processing_time' => 'integer',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
-        'dm_tips'=>'float'
+        'dm_tips'=>'float',
+   
     ];
+    
 
     public function setDeliveryChargeAttribute($value)
     {

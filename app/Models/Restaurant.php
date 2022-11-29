@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Vendor;
 use App\Scopes\ZoneScope;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Restaurant extends Model
 {
+    use HasFactory;
     protected $dates = ['opening_time', 'closeing_time'];
 
     protected $casts = [
@@ -36,7 +38,8 @@ class Restaurant extends Model
         'non_veg'=>'integer',
         'minimum_shipping_charge'=>'float',
         'per_km_shipping_charge'=>'float',
-        'vendor_id'=>'integer'
+        'vendor_id'=>'integer',
+        'order_count'=>'integer'
     ];
 
     protected $appends = ['gst_status','gst_code'];

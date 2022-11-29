@@ -612,8 +612,10 @@ class Helpers
 
     public static function currency_symbol()
     {
-        $currency_symbol = Currency::where(['currency_code' => Helpers::currency_code()])->first()->currency_symbol;
-        return $currency_symbol;
+       // var_dump(Currency::where(['currency_code' => Helpers::currency_code()])->first()); exit;
+       //   $currency_code=Currency::where(['currency_code' => Helpers::currency_code()])->first();
+       // $currency_symbol =$currency_code->currency_symbol;
+        return 'BDT';
     }
 
     public static function format_currency($value)
