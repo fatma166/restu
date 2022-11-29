@@ -152,7 +152,7 @@
                             </label>
                         </div>
                     </div>
-                    @if ($toggle_veg_non_veg)
+                    @if ( isset($toggle_veg_non_veg))
                     <div class="col-lg-4 col-sm-6">
                         <div class="form-group m-0">
                             <label class="toggle-switch toggle-switch-sm d-flex justify-content-between border rounded px-3 form-control" for="veg">

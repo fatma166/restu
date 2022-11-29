@@ -1654,4 +1654,5 @@ the restaurant web panel/ app won t get the access for managing foods.
   'messaging_sender_id' => 'messaging sender id',
   'app_id' => 'app id',
   'measurement_id' => 'measurement id',
+  'en' => 'en',
 );

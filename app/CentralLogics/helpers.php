@@ -612,10 +612,14 @@ class Helpers
 
     public static function currency_symbol()
     {
-       // var_dump(Currency::where(['currency_code' => Helpers::currency_code()])->first()); exit;
-       //   $currency_code=Currency::where(['currency_code' => Helpers::currency_code()])->first();
-       // $currency_symbol =$currency_code->currency_symbol;
-        return 'BDT';
+          $currency_code= Helpers::currency_code();
+       
+          $currency_code1=Currency::where('currency_code',$currency_code)->first();
+          
+           $currency_symbol =$currency_code1->currency_symbol;
+          // echo "jjjjk";
+          // print_r($currency_symbol); exit;
+        return $currency_symbol;
     }
 
     public static function format_currency($value)
@@ -1263,6 +1267,7 @@ class Helpers
 
     public static function format_coordiantes($coordinates)
     {
+       // print_r($coordinates); exit;
         $data = [];
         foreach ($coordinates as $coord) {
             $data[] = (object)['lat' => $coord->getlat(), 'lng' => $coord->getlng()];
